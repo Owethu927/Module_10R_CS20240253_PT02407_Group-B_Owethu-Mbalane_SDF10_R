@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif; 
-    background-color: #EEF0F4; 
+    background-color: #f6f6f8; 
 }
 /* Styling the container*/
 
@@ -29,4 +29,16 @@ input {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px; /*Incressed the font size to be bigger*/
+    margin: 10px 0;
+}
+
+button {
+    color: #FDFDFD;
+    background-color: #AC485A;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
