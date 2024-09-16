@@ -26,20 +26,22 @@ addButtonEl.addEventListener("click", function() {
 
 // Creating a fuction to be able to update the items in realtime//
 onValue(shoppingListInDB, function(snapshot) {
-    let itemsArray = Object.entries(snapshot.val())
+    if (snapshot.exists()){
+        let itemsArray = Object.entries(snapshot.val())
 
-    clearShoppingListEl()
+        clearShoppingListEl()
 
-    for (let i = 0; i < itemsArray.length; i++) {
-        let currentItem = itemsArray[i]
-        let currentItemID = currentItem[0]
-        let currentItemValue = currentItem[1]
+        for (let i = 0; i < itemsArray.length; i++) {
+            let currentItem = itemsArray[i]
+            let currentItemID = currentItem[0]
+            let currentItemValue = currentItem[1]
 
-        appendItemToShoppingListEl(currentItem)
-    } else { 
+            appendItemToShoppingListEl(currentItem)
+        }
+    } else {
         shoppingListEl.innerHTML = "No items here... yet"
-
     }
+    
 }) 
 // Creating a function to clear the input after putting a list//
 
